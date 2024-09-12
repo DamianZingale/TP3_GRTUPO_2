@@ -26,7 +26,7 @@ public class Archivo {
 			escritura.close();
 			return true;
 		} catch (IOException e) {
-			// TODO: handle exception
+			
 			e.printStackTrace();
 			return false;
 		}
@@ -41,7 +41,7 @@ public class Archivo {
 			mibuffer.close();
 			entrada.close();
 		} catch (IOException e) {
-			// TODO: handle exception
+			
 			e.printStackTrace();
 		}
 	}
