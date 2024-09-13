@@ -56,6 +56,11 @@ public class Persona {
 		
 		
 	}
+	
+	@Override
+    public String toString() {
+        return nombre + " - " + apellido + " - " + dni;
+    }
 
 	@Override
 	public int hashCode() {

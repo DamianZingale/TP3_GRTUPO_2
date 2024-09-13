@@ -10,6 +10,14 @@ public class Archivo {
 	
 	private String ruta;
 	
+	public String getRuta() {
+	     return ruta;
+	    }
+
+	public void setRuta(String ruta) {
+	     this.ruta = ruta;
+	    }
+	
 	public boolean existe() {
 		File archivo = new File(ruta);
 		if(archivo.exists())
@@ -65,10 +73,20 @@ public class Archivo {
     		 //EL CATCH SE LO SAQUE POR QUE ME ROMPIA EL CODIGO GG.
 	}
 	
-	/*
-	 * FALTA: LEERLINEAS(){}
-	 * 
-	 * Y EL GET Y SET DE LA RUTA.
-	 */
+	public List<String> leerLineas() throws IOException {
+        
+		List<String> lineas = new ArrayList<>(); // LISTA PARA ALMACENAR LAS LINEAS
+
+        try (FileReader archivo = new FileReader(ruta);
+        		BufferedReader br = new BufferedReader(archivo) {
+        			
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                lineas.add(linea); // AGREGA CADA LINEA A LA LISTA
+            }
+        }  
+        return lineas;
+    }
 
 }
+	
