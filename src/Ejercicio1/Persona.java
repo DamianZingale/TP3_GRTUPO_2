@@ -103,6 +103,7 @@ public class Persona {
 		
 		
 		
+}
 
 		/*for(int i = 0; i < dni.length();i++)
 		{
@@ -122,4 +123,3 @@ public class Persona {
 		}*/
 		
 
-}
