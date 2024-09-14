@@ -78,7 +78,7 @@ public class Archivo {
 		List<String> lineas = new ArrayList<>(); // LISTA PARA ALMACENAR LAS LINEAS
 
         try (FileReader archivo = new FileReader(ruta);
-        		BufferedReader br = new BufferedReader(archivo) {
+        		BufferedReader br = new BufferedReader(archivo))  {
         			
             String linea;
             while ((linea = br.readLine()) != null) {
